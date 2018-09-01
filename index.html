@@ -8,12 +8,39 @@
        padding: 6px;
        min-height: 12px;
      }
-    </style>
+        .alert {
+        padding: 15px;
+        border: 1px solid #d6e9c6;
+        border-radius: 4px;
+        color: #3c763d;
+        background-color: #dff0d8;
+      }
+      </style>
+      <div class="alert">
+      <strong>Hi there!</strong> You've read an important message. </div>
+    
   </head>
 
-  <body>
-    <main id="main">My ID is "main"!</main>
+    <p id="demo"></p>
 
+    <script>
+    document.getElementById("demo").innerHTML = "Hello World!";
+    document.getElementById('main');
+    
+    
+    </script>
+
+    </body>
+    
+    <body>
+    <main id="main">My ID is "main"!</main>
+    <script>
+
+      main.addEventListener('click', function(event) {
+        alert('I was clicked!');
+      });
+
+    </script>
     <br />
 
     <div>
