@@ -186,7 +186,7 @@ Now click on `div` 5. You should see
 4 bubbled
 3 bubbled
 2 bubbled
-1 bubbled
+1 bubbled 
 ```
 
 As you can see, the event propagates from the top of the page towards the target
