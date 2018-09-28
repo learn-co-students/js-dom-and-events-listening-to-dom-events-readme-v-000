@@ -39,3 +39,20 @@
     </div>
   </body>
 </html>
+
+<script>
+const divs = document.querySelectorAll('div');
+
+function color(e) {
+  // stop! that! propagation!
+  e.stopPropagation();
+
+  this.style.backgroundColor = '#cc0000';
+}
+
+for (let i = 0; i < divs.length; i++) {
+  divs[i].addEventListener('click', color);
+}
+
+
+</script>
