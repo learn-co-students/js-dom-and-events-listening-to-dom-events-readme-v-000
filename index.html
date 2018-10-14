@@ -9,9 +9,13 @@
        min-height: 12px;
      }
     </style>
+
+
   </head>
 
   <body>
+
+
     <main id="main">My ID is "main"!</main>
 
     <br />
@@ -38,4 +42,23 @@
       </div>
     </div>
   </body>
+  <script>
+
+    const divs = document.querySelectorAll('div');
+    const appendedElement = document.createElement('p');
+    appendedElement.innerHTML = 'This is a paragraph';
+    appendedElement.style.backgroundColor = '#cccccc';
+
+
+
+    function bubbleAppend(e) {
+      console.log('function called')
+      e.stopPropagation();
+      this.appendChild(appendedElement)
+    }
+
+    for ( let i = 0; i < divs.length; i++ ) {
+      divs[i].addEventListener('click', bubbleAppend )
+    }
+  </script>
 </html>
