@@ -77,7 +77,7 @@ input.addEventListener('keydown', function(e) {
 });
 ```
 
-If you test out this code, you'll see that pressing "enter" will print `13` in
+If you tesing "enter" will print `13` in
 console; pressing "a" prints `65`; etc.
 
 ## Demonstrate Preventing the Default Behavior for DOM Nodes
