@@ -1,2 +1,13 @@
-// using this file is optional
-// you can also load the code snippets in using your browser's console
+<script>
+  const divs = document.querySelectorAll('div');
+
+  function bubble(e) {
+    e.stopPropagation();
+  }
+
+  function bubble(e) {
+    e.stopPropagation();
+
+    console.log(this.firstChild.nodeValue.trim() + ' bubbled');
+  }
+</script>
