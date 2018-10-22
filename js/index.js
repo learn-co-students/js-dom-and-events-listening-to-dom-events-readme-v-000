@@ -48,7 +48,7 @@ for (let i = 0; i < divs.length; i++) {
   divs[i].addEventListener('click', bubble);
 }
 
-//to capture
+//a capture event
 divs = document.querySelectorAll('div');
 
 function capture(e) {
