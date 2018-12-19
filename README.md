@@ -253,4 +253,4 @@ triggers, and intercepting user interactions with `e.preventDefault()` and
 [quirks]: http://www.quirksmode.org/js/events_order.html
 [help]: http://help.learn.co/the-learn-ide/common-ide-questions/viewing-html-pages-in-the-learn-ide
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/listening-to-dom-nodes'>Listening To Nodes</a> on Learn.co and start learning to code for free.</p>
+<p class='util--hide'>View <a href='https://learn.co/lessons/listening-to-dom-nodes'>Listening To Nodes</a> on Learn.co and start learning to code for freeç</p>
