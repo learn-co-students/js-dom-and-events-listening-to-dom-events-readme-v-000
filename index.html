@@ -4,7 +4,7 @@
     <title>Listening to Nodes</title>
     <style>
      div {
-       border: 1px solid red;
+       border: 3px solid blue;
        padding: 6px;
        min-height: 12px;
      }
@@ -19,7 +19,31 @@
     <div>
       <label>Input:</label><input />
     </div>
-
+    <script><let divs = document.querySelectorAll('div');
+ 
+function bubble(e) {
+  console.log(this.firstChild.nodeValue.trim() + ' bubbled');
+}
+ 
+for (let i = 0; i < divs.length; i++) {
+  divs[i].addEventListener('click', bubble);
+}/script>
+    <script>const input = document.querySelector('input');
+ 
+input.addEventListener('keydown', function(e) {
+  console.log(e.which);
+});</script>
+    <script>const divs = document.querySelectorAll('div');
+ 
+function bubble(e) {
+  e.stopPropagation();
+ 
+  console.log(this.firstChild.nodeValue.trim() + ' bubbled');
+}
+ 
+for (let i = 0; i < divs.length; i++) {
+  divs[i].addEventListener('click', bubble);
+}</script>
     <br />
 
     <div>
