@@ -37,5 +37,32 @@
         </div>
       </div>
     </div>
+    <script>
+      const input = document.querySelector('input');
+
+      function changeColor(e) {
+        input.style.backgroundColor = 'red';
+      }
+      input.addEventListener('mouseover', changeColor);
+      input.addEventListener('mouseleave', function(e) {
+        input.style.backgroundColor = 'grey';
+      })
+      input.addEventListener('keydown', function(e) {
+        if (e.which === 13) {
+          input.style.color = 'green';
+        } else {
+          input.style.color = 'black';
+        }
+      })
+
+      const divs = document.querySelectorAll('div');
+
+      for (let i = 0; i < divs.length; i++) {
+        divs[i].addEventListener('click', function(e) {
+          e.stopPropagation();
+          divs[i].style.color = 'red';
+        })
+      }
+    </script>
   </body>
 </html>
