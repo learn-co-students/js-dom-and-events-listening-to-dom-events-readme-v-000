@@ -6,6 +6,44 @@ main.addEventListener('click', function(event) {
   alert('I was clicked!');
 });
 
+const input = document.querySelector('input');
+
+input.addEventListener('keydown', function(e) {
+	if (e.which === 71) {
+		console.log('default prevented');
+		return e.preventDefault();
+	} else {
+		console.log('Not a "g"');
+	}
+})
+
+let divs = document.querySelectorAll('div');
+
+function bubble(e) {
+  // remember all of those fancy DOM node properties?
+  // we're making use of them to get the number
+  // in each div here!
+ 
+  // if `this` is a bit confusing, don't worry —
+  // for now, know that it refers to the div that
+  // is triggering the current event handler.
+  e.stopPropagation();
+  console.log(this.firstChild.nodeValue.trim() + ' bubbled');
+}
+ 
+for (let i = 0; i < divs.length; i++) {
+  divs[i].addEventListener('click', bubble);
+}
+
+function capture(e) {
+  console.log(this.firstChild.nodeValue.trim() + ' captured');
+}
+ 
+for (let i = 0; i < divs.length; i++) {
+  // set the third argument to `true`!
+  divs[i].addEventListener('click', capture, true);
+}
+
 let element = document.createElement('div')
 
 element.innerHTML = 'Hello, DOM!'
