@@ -38,4 +38,21 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    const main = document.getElementById('main');
+
+    main.addEventListener('click', function(e) {
+      alert('I was clicked!');
+    });
+
+    const divs = document.querySelectorAll('div');
+
+    function bubble(e) {
+      console.log(this.firstChild.nodeValue.trim() + ' bubbled');
+    }
+
+    for (let i = 0; i < divs.length; i++) {
+      divs[i].addEventListener('click', bubble);
+    }
+  </script>
 </html>
