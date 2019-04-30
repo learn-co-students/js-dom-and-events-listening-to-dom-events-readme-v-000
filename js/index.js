@@ -5,3 +5,9 @@ const divs = document.querySelectorAll('div');
 divs.addEventListener('click', function(e) {
   alert("Don't touch my divs!");
 })
+
+const main = document.getElementById('main');
+
+main.addEventListener('click', function(e) {
+  alert('I was clicked!');
+});
