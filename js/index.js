@@ -1,18 +1,18 @@
 const main = document.getElementById('main');
  
-main.addEventListener('click', function(event) {
-  alert('I was clicked!');
-});
+// main.addEventListener('click', function(event) {
+//   alert('I was clicked!');
+// });
 
-const input = document.querySelector('input');
+// const input = document.querySelector('input');
  
-input.addEventListener('keydown', function(e) {
-  console.log(e.which);
-});
+// input.addEventListener('keydown', function(e) {
+//   console.log(e.which);
+// });
 
-const input = document.querySelector('input');
+const inpt = document.querySelector('input');
  
-input.addEventListener('keydown', function(e) {
+inpt.addEventListener('keydown', function(e) {
   if (e.which === 71) {
     console.log('default prevented');
     return e.preventDefault();
@@ -20,3 +20,16 @@ input.addEventListener('keydown', function(e) {
     console.log('Not a "g"');
   }
 });
+
+const divs = document.querySelectorAll('div');
+ 
+function bubble(e) {
+  // stop! that! propagation!
+  e.stopPropagation();
+ 
+  console.log(this.firstChild.nodeValue.trim() + ' bubbled');
+}
+ 
+for (let i = 0; i < divs.length; i++) {
+  divs[i].addEventListener('click', bubble);
+}
